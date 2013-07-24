@@ -2,16 +2,10 @@ git add --all
 git status
 git commit -av
 grunt build
-git checkout gh-pages
-echo 'In gh-pages'
 cd ./dist
-mv * ../
-cd -
-rm -rf dist
-echo 'Removed dist'
+echo 'In gh-pages'
 git add --all
-git commit -am 'Updated Build'
-git push origin gh-pages
-git reset --hard
-git checkout master
+git commit -am 'Updated Build push'
+git push origin gh-pages --force
+cd -
 echo 'Deploy Success'
